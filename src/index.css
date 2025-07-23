@@ -1,68 +1,564 @@
+/* src/index.css */
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colors - Based on the "orange and white" constraint and image's feel */
+  --color-background-light: #fcf8e3; /* Light cream/off-white background, close to image (for Hero) */
+  --color-primary-orange: #d1532f;   /* A muted, deep orange, similar to the button in the image */
+  --color-accent-orange: #e07b55;    /* A slightly brighter orange for highlights */
+  --color-text-dark: #333333;        /* Dark grey for general text for readability */
+  --color-text-light: #5a5a5a;       /* Slightly lighter grey for sub-text */
+  --color-text-hero-title: #2b2b2b;  /* Even darker for main hero title */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* New Colors from provided images */
+  --color-timer-background: #ab9e79; /* Muted brown/gold from countdown image */
+  --color-footer-background: #1f1f1f; /* Dark background from footer image */
+  --color-footer-text: #cccccc;     /* Lighter grey for footer text */
+  --color-footer-link-hover: #ffffff; /* White on hover for footer links */
+  --color-footer-icon-bg: #ea5016;  /* Orange for social media icons, similar to provided image */
+  --color-digital-gyb-red: #ea454c; /* Red for 'Digital GYB' in footer */
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background-light);
+  color: var(--color-text-dark);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Reset margin and padding for common elements */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, address {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Layout Container for Centering Content */
+.container {
+  max-width: 1200px; /* Or a suitable max-width */
+  margin: 0 auto;
+  padding: 0 20px; /* Padding on sides for smaller screens */
+}
+
+/* Utility for Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific component styles are placed directly in App.js styling as React components,
+   but could be split into individual CSS modules if preferred for a larger project. */
+
+/* Header (Navigation Bar) Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px; /* Adjust padding as needed */
+  background-color: transparent; /* Assuming transparent over background image */
+  position: relative;
+  z-index: 100;
+  top: 0;
+  width: auto;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-text {
+  font-size: 28px; /* Approximate font size based on image */
+  font-weight: bold;
+  color: var(--color-primary-orange);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.header-logo-subtitle {
+  font-size: 11px; /* Smaller text below logo */
+  line-height: 1.3;
+  color: var(--color-text-light);
+  margin-left: 10px; /* Spacing between icon/main text and subtitle */
+  white-space: nowrap; /* Prevent wrapping */
+  width: 160px; /* Fix width for text alignment below */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis */
+}
+
+
+.header-nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Spacing between navigation items */
+}
+
+.header-nav-links a {
+  font-size: 16px;
+  color: var(--color-text-light); /* Lighter color for standard links */
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.header-nav-links a:hover {
+  color: var(--color-primary-orange);
+}
+
+/* Dropdown arrow for 'Speakers' and 'Plan your visit' */
+.header-nav-links a.has-dropdown::after {
+  content: '▼'; /* Unicode down arrow */
+  font-size: 10px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.header-download-btn {
+  background-color: var(--color-primary-orange);
+  color: white;
+  padding: 15px 30px; /* Larger padding for a prominent button */
+  border-radius: 5px; /* Rounded corners for the button */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.header-download-btn:hover {
+  background-color: var(--color-accent-orange);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  padding: 80px 100px 50px 100px; /* Top padding, and significant left padding */
+  min-height: calc(100vh - 80px); /* Fill remaining viewport height after header */
+  box-sizing: border-box;
+  position: relative; /* Needed for background image positioning */
+  overflow: hidden; /* Hide any overflow */
+  background: linear-gradient(to right, var(--color-background-light) 60%, transparent); /* Blend with an implied image */
+  /* For the background illustration, assuming it's an SVG or a pattern */
+  /* If the user had an actual image: */
+  /* background-image: url('path/to/your/background-pattern.png'); */
+  /* background-position: right bottom; */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+}
+
+.hero-youtube-btn {
+  background-color: var(--color-primary-orange);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 14px;
+  margin-bottom: 40px; /* Space below the button */
+}
+
+.hero-youtube-btn:hover {
+  background-color: var(--color-accent-orange);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif; /* Elegant serif font for title */
+  font-size: 5vw; /* Responsive font size */
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--color-text-hero-title);
+  margin-bottom: 20px;
+  max-width: 800px; /* Control title width */
+}
+
+.hero-slogan {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2vw; /* Responsive slogan size */
+  color: var(--color-text-light);
+  margin-bottom: 50px;
+}
+
+.hero-date, .hero-location {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--color-text-dark);
+}
+
+.hero-date {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Countdown Section Styles (NEW) */
+.countdown-section {
+  background-color: var(--color-timer-background);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.countdown-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem; /* Larger font size for the heading */
+  color: var(--color-text-hero-title); /* Use dark text color for this heading too */
+  margin-bottom: 40px;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between time units */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  font-family: 'Roboto Mono', monospace; /* Monospace for numbers looks good */
+  font-size: 4rem; /* Large font size for numbers */
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer Section Styles (NEW) */
+.footer-section {
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+  padding: 60px 50px 20px 50px; /* Top/bottom padding and side padding */
+  font-size: 0.95rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  flex-wrap: wrap; /* Allow wrapping for columns */
+  gap: 30px; /* Gap between major footer sections */
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  color: white; /* Headings are whiter in the image */
+  margin-bottom: 20px;
+}
+
+.footer-departments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for departments */
+  gap: 15px;
+  min-width: 50%; /* Give enough space to department links */
+}
+
+.footer-departments-grid a {
+  color: var(--color-footer-text);
+  white-space: nowrap; /* Keep department names on one line */
+  font-size: 0.9rem;
+}
+
+.footer-departments-grid a:hover {
+  color: var(--color-footer-link-hover);
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-info p, .footer-contact-info address {
+  line-height: 1.5;
+}
+
+.footer-email-section {
+  text-align: right; /* Aligned to the right in the image */
+  max-width: 300px;
+}
+
+.footer-email-section p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.footer-email-address {
+  display: inline-flex; /* Use flex to align icon and text */
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-footer-icon-bg); /* Use orange for background */
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.footer-email-address:hover {
+  background-color: var(--color-accent-orange);
+}
+
+
+
+.footer-logo-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 250px; /* Ensure logo/socials have space */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  width: 50px; /* Adjust logo size as needed */
+  height: auto;
+}
+
+.footer-logo-text-section {
+  line-height: 1.2;
+}
+
+.footer-logo-text-section strong {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon-wrapper {
+  background-color: var(--color-footer-icon-bg);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon-wrapper:hover {
+  background-color: var(--color-accent-orange);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-bottom-links ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.footer-bottom-links a {
+  color: var(--color-footer-text);
+  font-size: 0.9rem;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-footer-link-hover);
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+}
+
+.footer-copyright span.digital-gyb {
+  color: var(--color-digital-gyb-red);
+  font-weight: 600;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .header {
+    padding: 15px 30px;
   }
-  a:hover {
-    color: #747bff;
+  .header-nav-links ul {
+    gap: 15px;
   }
-  button {
-    background-color: #f9f9f9;
+  .header-logo-subtitle {
+    display: none; /* Hide subtitle on smaller screens if too crowded */
+  }
+  .hero-section {
+    padding: 60px 50px;
+  }
+  .hero-title {
+    font-size: 6vw;
+  }
+  .hero-slogan {
+    font-size: 2.8vw;
+  }
+  .countdown-number {
+    font-size: 3rem;
+  }
+  .countdown-section h2 {
+    font-size: 2rem;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center; /* Center footer columns vertically */
+    text-align: center; /* Center text within columns */
+    margin-bottom: 30px;
+    gap: 40px;
+  }
+  .footer-departments-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for departments on tablets */
+    max-width: 600px;
+  }
+  .footer-contact-info,
+  .footer-email-section {
+    text-align: center;
+    width: 100%;
+    max-width: unset;
+  }
+  .footer-email-address {
+    justify-content: center; /* Center the email button */
+  }
+  .footer-logo-socials {
+    align-items: center;
+  }
+  .footer-social-links {
+    justify-content: center;
+  }
+  .footer-section {
+    padding: 40px 30px 20px 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-bottom-links ul {
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .header-nav-links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  .header-download-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  .hero-section {
+    padding: 40px 30px;
+    min-height: auto;
+  }
+  .hero-title {
+    font-size: 7vw;
+  }
+  .hero-slogan {
+    font-size: 3.5vw;
+  }
+  .countdown-number {
+    font-size: 2.5rem;
+  }
+  .countdown-label {
+    font-size: 0.9rem;
+  }
+  .countdown-section h2 {
+    font-size: 1.8rem;
+  }
+  .footer-departments-grid {
+    grid-template-columns: 1fr; /* Single column on phones */
+  }
+  .footer-departments-grid a {
+    text-align: center; /* Center department links */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo-text {
+    font-size: 24px;
+  }
+  .header-nav-links ul {
+    font-size: 14px;
+    gap: 8px;
+  }
+  .hero-section {
+    padding: 30px 20px;
+  }
+  .hero-title {
+    font-size: 8vw;
+  }
+  .hero-slogan {
+    font-size: 4vw;
+  }
+  .hero-date, .hero-location {
+    font-size: 1rem;
+  }
+  .countdown-number {
+    font-size: 2rem;
+  }
+  .countdown-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  .countdown-grid {
+    gap: 20px;
+  }
+  .footer-section {
+    padding: 30px 15px 15px 15px;
   }
 }
