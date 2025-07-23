@@ -12,10 +12,10 @@ import SpeakersPage from './pages/SpeakersPage';
 import ScheduleTemplatesPage from './pages/ScheduleTemplatesPage';
 import RegistrationPage from './pages/RegistrationPage';
 import AccommodationPage from './pages/AccommodationPage';
-import PublicationsPage from './pages/PublicationsPage'; // Import the new page
+import PublicationsPage from './pages/PublicationsPage';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home'); // Extend possible states
+  const [currentPage, setCurrentPage] = useState('home'); // 'home', 'call-for-papers', 'speakers', 'schedule', 'registration', 'accommodation', 'publication'
 
   const navigateTo = (page) => {
     setCurrentPage(page);
@@ -25,15 +25,16 @@ function App() {
   return (
     <div className="app">
       <Header activePage={currentPage} onNavigate={navigateTo} />
-      <VerticalDownloadsButton /> {/* This button is always fixed on the right per reference images */}
+       
 
+      {/* Conditionally render the current page component */}
       {currentPage === 'home' && <HomePage />}
       {currentPage === 'call-for-papers' && <CallForPapersPage />}
       {currentPage === 'speakers' && <SpeakersPage />}
       {currentPage === 'schedule' && <ScheduleTemplatesPage />}
       {currentPage === 'registration' && <RegistrationPage />}
       {currentPage === 'accommodation' && <AccommodationPage />}
-      {currentPage === 'publication' && <PublicationsPage />} {/* Render PublicationsPage */}
+      {currentPage === 'publication' && <PublicationsPage />}
     </div>
   );
 }

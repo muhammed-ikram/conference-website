@@ -26,8 +26,8 @@ function DetailedFooter() {
     "Mechanical Engineering (MEC)",
     "Civil Engineering (CIV)",
     "Computer Science Engineering- AI & ML (CSM)",
-    "Electrical and Electronics Engineering (EEE)",
-    "Computer Science and Engineering - Artificial Intelligence & Data Science (CAD)"
+    "Electrical and Electronics Engineering (EEE)"
+  
   ];
 
   const socialLinks = [
