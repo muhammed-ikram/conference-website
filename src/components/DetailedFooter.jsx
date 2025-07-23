@@ -1,5 +1,6 @@
 // src/components/DetailedFooter.js
 import React from 'react';
+import logo from '../assets/logo-2.png';
 
 // Icon placeholders (using text for now, in a real app you'd use Font Awesome or similar)
 const MailIcon = () => <span>✉</span>; // Envelope icon
@@ -59,7 +60,7 @@ function DetailedFooter() {
             <div className="footer-logo">
               {/* SRIT Logo (Placeholder image/text) */}
               {/* In a real project, replace with actual logo image path */}
-              <img src="https://via.placeholder.com/50x50/ea5016/ffffff?text=SRIT" alt="SRIT Logo" />
+              <img src={logo} alt="SRIT Logo" />
               <div className="footer-logo-text-section">
                 <strong>Srinivasa Ramanujan <br/> Institute of Technology</strong> <br/> (AUTONOMOUS)
               </div>
