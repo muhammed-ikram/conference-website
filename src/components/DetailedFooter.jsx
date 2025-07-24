@@ -1,6 +1,7 @@
 // src/components/DetailedFooter.js
 import React from 'react';
-import logo from '../assets/logo-2.png';
+// import logo from '../assets/logo-2.png';
+import logo from '../assets/logo-sm.jpg';
 
 // Icon placeholders (using text for now, in a real app you'd use Font Awesome or similar)
 const MailIcon = () => <span>✉</span>; // Envelope icon
