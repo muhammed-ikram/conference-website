@@ -884,6 +884,9 @@ button {
     font-weight: bold;
     color: var(--color-text-hero-title);
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .registration-content-container p {

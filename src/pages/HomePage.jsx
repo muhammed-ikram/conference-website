@@ -1,14 +1,25 @@
 // src/pages/HomePage.js
-import React from 'react';
+import React , {useState,useEffect} from 'react';
 import CountdownSection from '../components/CountdownSection';
 import DetailedFooter from '../components/DetailedFooter';
 
-function HomePage() {
+
+
+
+function HomePage({ activePage, onNavigate }) {
+
+    const handleNavLinkClick = (page) => {
+    onNavigate(page);
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking a link
+  };
+
+
   return (
     <>
       {/* Hero Section */}
       <main className="hero-section">
-        <button className="hero-youtube-btn">YouTube Live</button>
+        <button className="hero-youtube-btn"><a href="https://www.google.com/">Registration</a></button>
+        {/* <a href="#registration" className={activePage === 'registration' ? 'active' : ''} onClick={() => handleNavLinkClick('registration')}>Registration</a> */}
 
         <h1 className="hero-title">
           Next generation construction  <br />

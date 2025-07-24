@@ -14,6 +14,7 @@ import RegistrationPage from './pages/RegistrationPage';
 import AccommodationPage from './pages/AccommodationPage';
 import PublicationsPage from './pages/PublicationsPage';
 
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home'); // 'home', 'call-for-papers', 'speakers', 'schedule', 'registration', 'accommodation', 'publication'
 
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="app">
       <Header activePage={currentPage} onNavigate={navigateTo} />
-       
+      
 
       {/* Conditionally render the current page component */}
       {currentPage === 'home' && <HomePage />}
