@@ -138,6 +138,7 @@ button {
   z-index: 100;
   top: 0;
   width: auto;
+  background-color: #de6235;
 }
 
 .header-logo-section {
@@ -155,6 +156,7 @@ button {
   line-height: 1;
   padding-left:18px ;
   letter-spacing: -1px;
+  
 }
 
 .header-logo-section .header-logo-image {
@@ -191,7 +193,7 @@ button {
 
 .header-nav-links a {
   font-size: 16px;
-  color: var(--color-text-light);
+  color: white;
   font-weight: 500;
   position: relative;
   padding-bottom: 3px;
@@ -200,7 +202,7 @@ button {
 
 .header-nav-links a:hover,
 .header-nav-links a.active {
-  color: var(--color-primary-orange);
+  color: black;
 }
 
 .header-nav-links a.has-dropdown::after {
@@ -292,6 +294,11 @@ button {
   font-size: clamp(1.4rem, 2.2vw, 2.2rem);
   color: var(--color-text-light);
   margin-bottom: 50px;
+}
+
+.hero-slogan .srit {
+  color: #de6235;
+  font-weight: bold;
 }
 
 .hero-date, .hero-location {

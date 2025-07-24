@@ -54,6 +54,7 @@ function Header({ activePage, onNavigate }) {
       {/* Desktop Navigation */}
       <nav className="header-nav-links">
         <ul>
+          <li><a href="#home" className={activePage === 'home' ? 'active' : ''} onClick={() => handleNavLinkClick('home')}>Home</a></li>
           <li><a href="#call-for-papers" className={activePage === 'call-for-papers' ? 'active' : ''} onClick={() => handleNavLinkClick('call-for-papers')}>Call for Papers</a></li>
           <li><a href="#speakers" className={activePage === 'speakers' ? 'active has-dropdown' : 'has-dropdown'} onClick={() => handleNavLinkClick('speakers')}>Speakers</a></li>
           <li><a href="#schedule" className={activePage === 'schedule' ? 'active' : ''} onClick={() => handleNavLinkClick('schedule')}>Schedule</a></li>
@@ -71,6 +72,7 @@ function Header({ activePage, onNavigate }) {
       <nav className={`mobile-nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="close-icon" onClick={toggleMobileMenu}>×</div> {/* Close button */}
         <ul>
+            <li><a href="#home" className={activePage === 'home' ? 'active' : ''} onClick={() => handleNavLinkClick('home')}>Home</a></li>
           <li><a href="#call-for-papers" className={activePage === 'call-for-papers' ? 'active' : ''} onClick={() => handleNavLinkClick('call-for-papers')}>Call for Papers</a></li>
           <li><a href="#speakers" className={activePage === 'speakers' ? 'active' : ''} onClick={() => handleNavLinkClick('speakers')}>Speakers</a></li>
           <li><a href="#schedule" className={activePage === 'schedule' ? 'active' : ''} onClick={() => handleNavLinkClick('schedule')}>Schedule</a></li>

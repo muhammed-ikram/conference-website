@@ -17,10 +17,10 @@ function HomePage() {
         </h1>
 
         <p className="hero-slogan">
-          "Synergy of Materials and Structures"
+          "<b className='srit'>S</b>ustainable, <b className='srit'>R</b>esilient <b className='srit'>I</b>nnovation for <b className='srit'>T</b>omorrow"
         </p>
 
-        <p className="hero-date">03-05 July 2025</p>
+        <p className="hero-date">18 SEP 2025 - 19 SEP 2025</p>
         <address className="hero-location">
           Department of Civil & Environmental Engineering, <br />
          Srinivasa Ramanujan Institute of Technology (Autonomous) <br />
