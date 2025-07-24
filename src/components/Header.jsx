@@ -1,5 +1,6 @@
 // src/components/Header.js
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo-1.png';
 
 function Header({ activePage, onNavigate }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,21 +32,14 @@ function Header({ activePage, onNavigate }) {
   return (
     <header className="header">
       <div className="header-logo-section">
-        {/* ICCMS Logo (Text representation, as image cannot be embedded directly) */}
+        {/* SRIT Logo */}
         <div style={{ marginRight: '10px' }} onClick={() => handleNavLinkClick('home')}>
-          <svg width="40" height="40" viewBox="0 0 40 40">
-            <circle cx="10" cy="10" r="5" fill="#5AA63C" />
-            <circle cx="20" cy="10" r="5" fill="#FFB200" />
-            <circle cx="30" cy="10" r="5" fill="#DA5C55" />
-            <circle cx="15" cy="20" r="5" fill="#884FC3" />
-            <circle cx="25" cy="20" r="5" fill="#3D8EDC" />
-            <circle cx="20" cy="30" r="5" fill="#CC5200" />
-          </svg>
+          <img className="header-logo-image" src={logo} alt="srit-logo" />
         </div>
         <div onClick={() => handleNavLinkClick('home')}>
-          <span className="header-logo-text">ICCMS</span>
+          <span className="header-logo-text">SRIT</span>
           <div className="header-logo-subtitle">
-            3rd, 3rd-5th July 2025, IIT Tirupati, India
+            3rd, 3rd-5th July 2025, SRIT, India
             <br/>Third International Conference on
             <br/>Construction Materials and Structures
           </div>

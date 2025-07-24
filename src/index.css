@@ -153,7 +153,17 @@ button {
   font-weight: bold;
   color: var(--color-primary-orange);
   line-height: 1;
+  padding-left:18px ;
   letter-spacing: -1px;
+}
+
+.header-logo-section .header-logo-image {
+  width: 80px; /* Fixed size for logo */
+  height: 70px;
+  /* border-radius: 50%;
+  object-fit: cover; */
+  background-color: none;
+  margin-right: 10px; /* Space between logo and text */
 }
 
 .header-logo-subtitle {
@@ -446,22 +456,44 @@ button {
   gap: 15px;
 }
 
+
+/* Existing CSS for the wrapper (no changes needed here) */
 .detailed-footer-section .social-icon-wrapper {
-  background-color: var(--color-footer-icon-bg);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
+    background-color: var(--color-footer-icon-bg);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex; /* Makes it a flex container */
+    align-items: center; /* Vertically centers its content */
+    justify-content: center; /* Horizontally centers its content */
+    color: black; /* This is typically for text-based icons, won't affect images */
+    font-size: 0.8rem; /* This is typically for text-based icons, won't affect images */
+    transition: background-color 0.3s ease;
+    padding-left: 0.5rem;
 }
 
-.detailed-footer-section .social-icon-wrapper:hover {
-  background-color: var(--color-accent-orange);
-}
+/* --- NEW CSS RULES BELOW THIS LINE --- */
+
+/* This rule targets the <img> element that is inside a .social-icon-wrapper */
+.detailed-footer-section .social-icon-wrapper img {
+    /*
+     * Use max-width and max-height with object-fit: contain
+     * to scale the image down to fit within the wrapper
+     * without distortion, while maintaining its aspect ratio.
+     *
+     * Adjust the percentages (e.g., 70%, 80%, 90%)
+     * based on how much "padding" you want around the icon inside the circle.
+     * 70% is a good starting point to give some breathing room.
+     */
+    max-width: 70%;    /* Make the image take up to 70% of the wrapper's width (40px * 0.7 = 28px) */
+    max-height: 70%;   /* Make the image take up to 70% of the wrapper's height (40px * 0.7 = 28px) */
+    object-fit: contain; /* Ensures the entire image is visible, scaling it down if necessary, without cropping or stretching */
+   
+  } 
+  
+
+
+
 
 .detailed-footer-section .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);

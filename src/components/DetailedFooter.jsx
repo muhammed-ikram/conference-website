@@ -2,22 +2,27 @@
 import React from 'react';
 // import logo from '../assets/logo-2.png';
 import logo from '../assets/logo-sm.jpg';
+import facebookIcon from '../assets/facebook.png';
+import twitterIcon from '../assets/twitter-x.svg';    
+import linkedinIcon from '../assets/linkedin.png';
+import instagramIcon from '../assets/instagram.png';
 
 // Icon placeholders (using text for now, in a real app you'd use Font Awesome or similar)
 const MailIcon = () => <span>✉</span>; // Envelope icon
 const PhoneIcon = () => <span>☎</span>; // Phone icon
 
 // Dummy Social Icons (You'd replace these with actual icon library components or SVGs)
+// Dummy Social Icons (You'd replace these with actual icon library components or SVGs)
 const SocialIcon = ({ type }) => {
-    switch (type) {
-        case 'facebook': return <span>f</span>; // Replace with actual Facebook icon
-        case 'twitter': return <span>t</span>;  // Replace with actual Twitter icon
-        case 'linkedin': return <span>in</span>; // Replace with actual LinkedIn icon
-        case 'instagram': return <span></span>; // Photo camera as Instagram placeholder
-        case 'youtube': return <span>▶</span>; // Play button as YouTube placeholder
-        default: return null;
-    }
-}
+  switch (type) {
+    case 'facebook': return <span><img src={facebookIcon} alt="Facebook" /></span>; // Added alt text
+    case 'twitter': return <span><img src={twitterIcon} alt="Twitter" /></span>;   // Added alt text
+    case 'linkedin': return <span><img src={linkedinIcon} alt="LinkedIn" /></span>; // Added alt text
+    case 'instagram': return <span><img src={instagramIcon} alt="Instagram" /></span>; // Added alt text
+    default: return null;
+  }
+};
+
 
 
 function DetailedFooter() {
@@ -35,8 +40,7 @@ function DetailedFooter() {
     { name: "Facebook", iconType: 'facebook', url: "#" },
     { name: "Twitter", iconType: 'twitter', url: "#" },
     { name: "LinkedIn", iconType: 'linkedin', url: "#" },
-    { name: "Instagram", iconType: 'instagram', url: "#" },
-    { name: "YouTube", iconType: 'youtube', url: "#" },
+    { name: "Instagram", iconType: 'instagram', url: "#" }
   ];
 
   const bottomLinks = [

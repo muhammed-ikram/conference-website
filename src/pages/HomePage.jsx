@@ -11,9 +11,9 @@ function HomePage() {
         <button className="hero-youtube-btn">YouTube Live</button>
 
         <h1 className="hero-title">
-          Third International Conference on <br />
-          Construction Materials and <br />
-          Structures
+          Next generation construction  <br />
+          with sustainable, resilient and <br />
+          smart civil engineering
         </h1>
 
         <p className="hero-slogan">
@@ -23,8 +23,8 @@ function HomePage() {
         <p className="hero-date">03-05 July 2025</p>
         <address className="hero-location">
           Department of Civil & Environmental Engineering, <br />
-          Indian Institute of Technology (IIT) Tirupati, Andhra Pradesh, <br />
-          India
+         Srinivasa Ramanujan Institute of Technology (Autonomous) <br />
+          Rotarypuram Village, BKS Mandal, Ananthapuramu. 
         </address>
       </main>
 
