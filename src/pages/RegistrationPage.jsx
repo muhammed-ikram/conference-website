@@ -1,6 +1,7 @@
 // src/pages/RegistrationPage.js
 import React from 'react';
 import SimpleFooter from '../components/SimpleFooter'; // Using the simple footer as per the page design
+import DetailedFooter from '../components/DetailedFooter';
 
 function RegistrationPage() {
   const indianRegistration = [
@@ -71,7 +72,7 @@ function RegistrationPage() {
 
         <h2 className="section-title">Registration</h2> {/* This seems to be a redundant heading from the image, placed at the very bottom before the footer. */}
       </div>
-      <SimpleFooter />
+      <DetailedFooter />
     </div>
   );
 }

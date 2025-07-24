@@ -1,6 +1,7 @@
 // src/pages/CallForPapersPage.js
 import React from 'react';
 import SimpleFooter from '../components/SimpleFooter';
+import DetailedFooter from '../components/DetailedFooter';
 
 function CallForPapersPage() {
   const theme1 = [
@@ -75,7 +76,7 @@ function CallForPapersPage() {
         </div>
       </div>
 
-      <SimpleFooter />
+      <DetailedFooter />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 // src/pages/PublicationsPage.js
 import React from 'react';
 import SimpleFooter from '../components/SimpleFooter'; // Using the simple footer as per the page design
+import DetailedFooter from '../components/DetailedFooter';
 
 const journalsData = [
   {
@@ -101,7 +102,7 @@ function PublicationsPage() {
 
         <p className="publications-footer-text">More journals will be updated soon</p>
       </div>
-      <SimpleFooter />
+      <DetailedFooter />
     </div>
   );
 }

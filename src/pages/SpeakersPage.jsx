@@ -1,6 +1,7 @@
 // src/pages/SpeakersPage.js
 import React from 'react';
 import SimpleFooter from '../components/SimpleFooter'; // Use the simple footer for this page
+import DetailedFooter from '../components/DetailedFooter';
 
 // Sample speaker data (replace img URLs with actual speaker images if available)
 const speakersData = [
@@ -29,7 +30,7 @@ function SpeakersPage() {
           </div>
         ))}
       </div>
-      <SimpleFooter />
+      <DetailedFooter />
     </div>
   );
 }

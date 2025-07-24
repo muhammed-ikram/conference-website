@@ -1,6 +1,7 @@
 // src/pages/ScheduleTemplatesPage.js
 import React from 'react';
 import SimpleFooter from '../components/SimpleFooter'; // Using the simple footer as per the image
+import DetailedFooter from '../components/DetailedFooter';
 
 function ScheduleTemplatesPage() {
   return (
@@ -56,7 +57,7 @@ function ScheduleTemplatesPage() {
         </section>
 
       </div>
-      <SimpleFooter />
+      <DetailedFooter/>
     </div>
   );
 }

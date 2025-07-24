@@ -1,6 +1,7 @@
 // src/pages/AccommodationPage.js
 import React from 'react';
 import SimpleFooter from '../components/SimpleFooter'; // Use the simple footer
+import DetailedFooter from '../components/DetailedFooter';
 
 // Link icon placeholder (using unicode character for now)
 const LinkIcon = () => <span></span>;
@@ -82,7 +83,7 @@ function AccommodationPage() {
           ))}
         </div>
       </div>
-      <SimpleFooter />
+      <DetailedFooter/>
     </div>
   );
 }
