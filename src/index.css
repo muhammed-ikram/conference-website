@@ -700,6 +700,7 @@ button {
   text-align: center;
   min-height: 280px;
   justify-content: center;
+  position: relative;
 }
 
 .speaker-card-img {
@@ -726,6 +727,23 @@ button {
   font-size: clamp(0.9rem, 1vw, 1rem);
   color: var(--color-text-light);
   line-height: 1.5;
+}
+
+.speaker-card-topic {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: bold;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.speaker-card-session{
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  /* color: var(--color-text-dark); */
+  color: #a6000c;
+  margin-bottom: 10px;
+  font-weight: bold;
+  position: absolute;
+  top:2%;
 }
 
 /* ----------------- Schedule and Templates Page Styles ----------------- */
