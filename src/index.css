@@ -361,6 +361,18 @@ button {
   color: var(--color-footer-text);
   padding: 60px 50px 20px 50px;
   font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6rem;
+  
+}
+
+.footer-srit {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ 
 }
 
 .detailed-footer-section .footer-top {
@@ -431,22 +443,25 @@ button {
 }
 
 
-.detailed-footer-section .footer-logo-socials {
+/* .detailed-footer-section .footer-logo-socials {
   display: flex;
   flex-direction: column;
   gap: 20px;
   min-width: 250px;
-}
+} */
 
 .detailed-footer-section .footer-logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .detailed-footer-section .footer-logo img {
   width: 50px;
   height: auto;
+  
 }
 
 .detailed-footer-section .footer-logo-text-section {

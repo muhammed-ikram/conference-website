@@ -9,16 +9,9 @@ function SimpleFooter() {
   ];
 
   return (
-    <footer className="simple-footer">
-      <p className="copyright">Copyright © 2025 The Concrete Conference</p>
-      <div className="simple-footer-links">
-        <ul>
-          {links.map((link, index) => (
-            <li key={index}><a href={link.url}>{link.name}</a></li>
-          ))}
-        </ul>
-      </div>
-    </footer>
+    <div>
+        
+    </div>
   );
 }
 
