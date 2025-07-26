@@ -4,7 +4,7 @@
   /* Colors - Based on the "orange and white" constraint and image's feel */
   --color-background-light: #fcf8e3; /* Light cream/off-white background, close to image (for Hero) */
   --color-primary-orange: #d1532f;   /* A muted, deep orange, similar to the button in the image */
-  --color-accent-orange: #e07b55;    /* A slightly brighter orange for highlights */
+  --color-accent-orange: #d6937b;    /* A slightly brighter orange for highlights */
   --color-text-dark: #333333;        /* Dark grey for general text for readability */
   --color-text-light: #5a5a5a;       /* Slightly lighter grey for sub-text */
   --color-text-hero-title: #2b2b2b;  /* Even darker for main hero title */
@@ -160,12 +160,18 @@ button {
 }
 
 .header-logo-section .header-logo-image {
-  width: 80px; /* Fixed size for logo */
+  width: 35rem; /* Fixed size for logo */
   height: 70px;
   /* border-radius: 50%;
   object-fit: cover; */
   background-color: none;
   margin-right: 10px; /* Space between logo and text */
+}
+
+.title-telugu {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
 }
 
 .header-logo-subtitle {
@@ -178,6 +184,60 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* src/index.css */
+
+/* ... (previous CSS code) ... */
+
+/* ----------------- Media Queries for Responsiveness ----------------- */
+
+@media (max-width: 992px) { /* Adjustments for Tablets and smaller desktops */
+  /* ... (existing rules for 992px) ... */
+
+  /* Make Telugu title stack below English on smaller screens */
+  .title-telugu {
+    flex-direction: column; /* Changed from row to column */
+    gap: 1.5rem; /* Adjust gap for vertical stacking */
+  }
+
+  /* Adjustments for header elements on smaller screens (existing, keep them) */
+  .header {
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background-light);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 0;
+  }
+  .header-nav-links {
+    display: none;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+  /* ... (rest of existing rules for 992px) ... */
+}
+
+/* ... (rest of media queries for 480px, etc. - keep them) ... */
+
+@media (max-width: 480px) { /* Adjustments for very small phones */
+    /* ... (existing rules for 480px) ... */
+
+    /* Ensure horizontal padding is reduced further for the main titles on very small screens */
+   
+
+    /* All main page content containers will use these padding */
+    .cfp-content, .speakers-grid-container, .schedule-templates-container,
+    .registration-content-container, .accommodation-content-container,
+    .publications-content-container, .hero-section { /* Added .hero-section here for consistent padding */
+        padding: 30px 20px; /* Unified smaller horizontal padding for the hero too */
+        margin: 30px auto; /* Consistent top/bottom margin */
+    }
+}
+
+
 
 .header-nav-links {
     flex-grow: 1; /* Allows nav to take available space */
@@ -310,6 +370,18 @@ button {
 .hero-date {
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+.sponsors{
+  background-color:#f5f0db;
+  text-align: center;
+  height: 15rem;
+  padding-top: 2rem;
+}
+
+.sponsors .image-sponsors{
+  height: 10rem;
+  border-radius: 1rem;
 }
 
 /* ----------------- Countdown Section Styles ----------------- */
@@ -884,9 +956,6 @@ button {
     font-weight: bold;
     color: var(--color-text-hero-title);
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .registration-content-container p {

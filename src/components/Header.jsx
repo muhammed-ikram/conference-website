@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/logo-1.png';
+import logo from '../assets/SRIT-Logo.jpg';
 
 function Header({ activePage, onNavigate }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,14 +36,14 @@ function Header({ activePage, onNavigate }) {
         <div style={{ marginRight: '10px' }} onClick={() => handleNavLinkClick('home')}>
           <img className="header-logo-image" src={logo} alt="srit-logo" />
         </div>
-        <div onClick={() => handleNavLinkClick('home')}>
+        {/* <div onClick={() => handleNavLinkClick('home')}>
           <span className="header-logo-text">SRIT</span>
           <div className="header-logo-subtitle">
             3rd, 3rd-5th July 2025, SRIT, India
             <br/>Third International Conference on
             <br/>Construction Materials and Structures
           </div>
-        </div>
+        </div> */}
 
         {/* Hamburger icon for mobile */}
         <div className="hamburger-icon" onClick={toggleMobileMenu}>
