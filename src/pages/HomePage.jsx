@@ -29,11 +29,11 @@ function HomePage({ activePage, onNavigate }) {
           smart civil engineering
         </h1>
 
-        <h1 className="hero-title">
+        {/* <h1 className="hero-title">
           స్థిరమైన, స్థితిస్థాపకత కలిగిన <br />
           మరియు స్మార్ట్ సివిల్ ఇంజనీరింగ్‌తో <br />
           తదుపరి తరం నిర్మాణం
-        </h1>
+        </h1> */}
         </div>
         <p className="hero-slogan">
           "<b className='srit'>S</b>ustainable, <b className='srit'>R</b>esilient <b className='srit'>I</b>nnovation for <b className='srit'>T</b>omorrow"

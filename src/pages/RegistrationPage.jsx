@@ -1,30 +1,44 @@
 // src/pages/RegistrationPage.js
 import React from 'react';
-import SimpleFooter from '../components/SimpleFooter'; // Using the simple footer as per the page design
-import DetailedFooter from '../components/DetailedFooter';
+import SimpleFooter from '../components/SimpleFooter'; // Using the simple footer for consistency
 
 function RegistrationPage() {
-//   const indianRegistration = [
-//     { category: "Students (Bachelors, Masters, Ph.D)", regular: "₹6,000/- *" },
-//     { category: "Attendees/co-authors (Student)", regular: "₹3,540/- *" },
-//     { category: "Faculty/Scientists/PSU/R&D", regular: "₹10,620/- *" },
-//     { category: "Industry", regular: "₹12,980/- *" },
-//     { category: "Additional papers", regular: "₹3,540/- *" },
-//   ];
-
-//   const foreignerRegistration = [
-//     { category: "Students (Bachelors, Masters, Ph.D)", regular: "US$150/- or ₹13,500/- *" },
-//     { category: "Attendees/co-authors (Student)", regular: "US$71/- or ₹6,372/- *" },
-//     { category: "Faculty/Scientists/Researchers", regular: "US$212/- or ₹19,116/- *" },
-//     { category: "Industry", regular: "US$295/- or ₹26,550/- *" },
-//     { category: "Additional papers", regular: "US$71/- or ₹6,372/- *" },
-//   ];
 
   return (
     <div className="registration-page">
+      <div className="registration-content-container">
         <h1 className="page-title">NO REGISTRATION FEE</h1>
-      
-     
+        
+        <h2 className="section-title note-title">
+          NOTE: Limited to the first 50 registered participants only
+        </h2>
+
+        <h2 className="section-title">How to Register:</h2>
+        
+        <p>Please follow the steps below to complete your registration through the AICTE ATAL Portal:</p>
+
+        <ol className="registration-steps">
+            <li>
+                Visit: <a href="https://atalacademy.aicte-india.org/login" target="_blank" rel="noopener noreferrer">https://atalacademy.aicte-india.org/login</a>
+            </li>
+            <li>
+                Sign up as a participant (if not already registered) and fill in your profile details.
+            </li>
+            <li>
+                Log in and navigate through the following details:
+                <ul className="step-details">
+                    <li>Select FDP Type: <strong>VAANI</strong></li>
+                    <li>Select Month: <strong>September</strong></li>
+                    <li>Select Thrust Area: <strong>Disaster Management & Resilient Infrastructure</strong></li>
+                    <li>Select Mode: <strong>Face to Face</strong></li>
+                </ul>
+            </li>
+            <li>
+                Register for the program with Application No: <strong>2884843614</strong>, titled “Next Generation Construction with Sustainable and Smart Civil Engineering”.
+            </li>
+        </ol>
+      </div>
+      <SimpleFooter />
     </div>
   );
 }

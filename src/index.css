@@ -11,8 +11,8 @@
 
   /* Colors from previous images */
   --color-timer-background: #ab9e79; /* Muted brown/gold from countdown image */
-  --color-footer-background: #1f1f1f; /* Dark background from footer image */
-  --color-footer-text: #cccccc;     /* Lighter grey for footer text */
+  --color-footer-background: #2b2b2b; /* Dark background from footer image */
+  --color-footer-text: #ffffff;     /* White text for footer, as per image */
   --color-footer-link-hover: #ffffff; /* White on hover for footer links */
   --color-footer-icon-bg: #ea5016;  /* Orange for social media icons, similar to provided image */
   --color-digital-gyb-red: #ea454c; /* Red for 'Digital GYB' in footer */
@@ -427,25 +427,51 @@ button {
   letter-spacing: 1px;
 }
 
-/* ----------------- Detailed Footer Section Styles ----------------- */
+/* ----------------- Detailed Footer Section Styles (HORIZONTAL) ----------------- */
 .detailed-footer-section {
-  background-color: var(--color-footer-background);
-  color: var(--color-footer-text);
-  padding: 60px 50px 20px 50px;
-  font-size: 0.95rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 6rem;
-  
+    background-color: var(--color-footer-background);
+    color: var(--color-footer-text);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-srit {
- display: flex;
- flex-direction: column;
- gap: 1.5rem;
- 
+/* The direct container for the logo and text block */
+.logo-footer-srit{
+  display: flex;
+  flex-direction: row; /* Main change for horizontal layout */
+  align-items: center; /* Vertically align the logo and the text block */
+  gap: 20px; /* Space between logo and text */
 }
+
+/* Style for the logo image */
+.detailed-footer-section .footer-logo img {
+  height: 50px;
+  width: auto;
+  display: block; /* Removes any extra space below the image */
+}
+
+/* Container for the text block, aligned left */
+.detailed-footer-section .footer-logo-text-section {
+  text-align: left;
+}
+
+/* Styling for the text lines inside the block */
+.detailed-footer-section .footer-logo-text-section * {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.detailed-footer-section .footer-logo-text-section strong {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Styles below are from the original complex footer and will not apply to the current simple design. */
+/* Keeping them does no harm if other footers exist. */
 
 .detailed-footer-section .footer-top {
   display: flex;
@@ -463,14 +489,12 @@ button {
 
 .detailed-footer-section .footer-departments-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for departments */
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  min-width: 50%; /* Give enough space to department links */
+  min-width: 50%;
 }
 .detailed-footer-section .footer-departments-grid a {
   color: var(--color-footer-text);
-  /* --- FIX: Removed white-space: nowrap; to allow text wrapping and prevent overlap --- */
-  /* white-space: nowrap; */ /* Removed */
   font-size: 0.9rem;
 }
 
@@ -514,81 +538,31 @@ button {
   background-color: var(--color-accent-orange);
 }
 
-
-/* .detailed-footer-section .footer-logo-socials {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  min-width: 250px;
-} */
-
-.detailed-footer-section .footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.detailed-footer-section .footer-logo img {
-  width: 50px;
-  height: auto;
-  
-}
-
-.detailed-footer-section .footer-logo-text-section {
-  line-height: 1.2;
-}
-
-.detailed-footer-section .footer-logo-text-section strong {
-  font-size: 1.1rem;
-  color: white;
-}
-
 .detailed-footer-section .footer-social-links {
   display: flex;
   gap: 15px;
 }
 
-
-/* Existing CSS for the wrapper (no changes needed here) */
 .detailed-footer-section .social-icon-wrapper {
     background-color: var(--color-footer-icon-bg);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: flex; /* Makes it a flex container */
-    align-items: center; /* Vertically centers its content */
-    justify-content: center; /* Horizontally centers its content */
-    color: black; /* This is typically for text-based icons, won't affect images */
-    font-size: 0.8rem; /* This is typically for text-based icons, won't affect images */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 0.8rem;
     transition: background-color 0.3s ease;
     padding-left: 0.5rem;
 }
 
-/* --- NEW CSS RULES BELOW THIS LINE --- */
-
-/* This rule targets the <img> element that is inside a .social-icon-wrapper */
 .detailed-footer-section .social-icon-wrapper img {
-    /*
-     * Use max-width and max-height with object-fit: contain
-     * to scale the image down to fit within the wrapper
-     * without distortion, while maintaining its aspect ratio.
-     *
-     * Adjust the percentages (e.g., 70%, 80%, 90%)
-     * based on how much "padding" you want around the icon inside the circle.
-     * 70% is a good starting point to give some breathing room.
-     */
-    max-width: 70%;    /* Make the image take up to 70% of the wrapper's width (40px * 0.7 = 28px) */
-    max-height: 70%;   /* Make the image take up to 70% of the wrapper's height (40px * 0.7 = 28px) */
-    object-fit: contain; /* Ensures the entire image is visible, scaling it down if necessary, without cropping or stretching */
-   
-  } 
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain; 
+} 
   
-
-
-
-
 .detailed-footer-section .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
@@ -939,7 +913,8 @@ button {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px); /* Assumes 80px header height */
+  flex-grow: 1;
 }
 
 .registration-content-container {
@@ -949,13 +924,30 @@ button {
     flex-grow: 1;
 }
 
-.registration-content-container h1.page-title,
-.registration-content-container h2.section-title {
+.registration-content-container h1.page-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(2rem, 2.8vw, 2.8rem);
     font-weight: bold;
     color: var(--color-text-hero-title);
+    text-align: center; /* Center the main title */
     margin-bottom: 30px;
+}
+
+.registration-content-container .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bold;
+    color: var(--color-text-hero-title);
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.registration-content-container .note-title {
+    color: var(--color-registration-table-header-bg);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 .registration-content-container p {
@@ -965,16 +957,52 @@ button {
     margin-bottom: 20px;
 }
 
-.registration-content-container p:last-of-type {
-    margin-bottom: 0;
+.registration-content-container ol.registration-steps {
+    list-style-position: outside;
+    padding-left: 25px;
+    margin-top: 20px;
+}
+
+.registration-content-container ol.registration-steps li {
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    color: var(--color-registration-info-text);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.registration-content-container ol.registration-steps li a {
+    color: var(--color-primary-orange);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.registration-content-container ol.registration-steps li a:hover {
+    color: var(--color-accent-orange);
+}
+
+.registration-content-container ul.step-details {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 15px;
+    border-left: 3px solid var(--color-accent-orange);
+    margin-left: 10px;
+}
+
+.registration-content-container ul.step-details li {
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    margin-bottom: 10px;
+}
+
+.registration-content-container strong {
+    font-weight: 600;
 }
 
 
-/* Registration Tables */
+/* Registration Tables (preserved from old design, not used in new content) */
 .registration-table-wrapper {
     margin: 40px 0;
     width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    overflow-x: auto;
 }
 
 .registration-table {
@@ -983,8 +1011,8 @@ button {
     border: 2px solid var(--color-registration-table-border);
     font-size: 1rem;
     text-align: left;
-    white-space: nowrap; /* Prevent content inside table cells from wrapping by default, let overflow handle it */
-    min-width: 600px; /* Ensure table doesn't get too compressed */
+    white-space: nowrap;
+    min-width: 600px;
 }
 
 .registration-table th,
@@ -1004,7 +1032,7 @@ button {
 
 .registration-table td {
     background-color: var(--color-registration-table-cell-bg);
-    font-size: clamp(0.9rem, 1vw, 1rem); /* Adaptive cell text size */
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 .registration-table tbody tr td:last-child {
@@ -1344,9 +1372,6 @@ button {
   }
 
   /* Footer responsiveness */
-  .detailed-footer-section {
-    padding: 40px 30px 20px 30px;
-  }
   .detailed-footer-section .footer-top {
     flex-direction: column;
     align-items: flex-start; /* Align content to left, like text would be naturally */
@@ -1477,7 +1502,8 @@ button {
     padding: 0 30px;
     margin: 40px auto 60px auto;
   }
-  .registration-content-container h1.page-title {
+  .registration-content-container h1.page-title,
+  .registration-content-container .section-title {
     font-size: 2.2rem;
     margin-bottom: 25px;
   }
@@ -1497,12 +1523,11 @@ button {
     font-size: 1rem;
   }
   .registration-table {
-    min-width: 500px; /* Keep minimal width, but allow more dynamic flex with overflow */
-    /* Removed `white-space: normal;` here specifically, it was redundant. Overflow-x handles scroll. */
+    min-width: 500px;
   }
-  .registration-table thead tr th:first-child, /* Ensures header width for first col to avoid cramping text on mobile */
+  .registration-table thead tr th:first-child,
   .registration-table tbody tr td:first-child {
-      min-width: 150px; /* Adjust as needed */
+      min-width: 150px;
   }
 
 
@@ -1690,7 +1715,8 @@ button {
   }
 
 
-  .registration-content-container h1.page-title {
+  .registration-content-container h1.page-title,
+  .registration-content-container .section-title {
     font-size: 2rem;
   }
   .registration-table-wrapper {
@@ -1754,3 +1780,147 @@ button {
     font-size: 0.75rem;
   }
 }
+
+/* src/index.css */
+
+/* --- Find this entire section in your CSS file and replace it --- */
+
+/* ----------------- Registration Page Styles ----------------- */
+.registration-page {
+  background-color: var(--color-registration-page-bg);
+  padding-bottom: 40px; /* Give some space at the very bottom */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px); /* Assumes ~80px header height, pushes footer down */
+}
+
+.registration-content-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 50px;
+    flex-grow: 1; /* Allows this container to take up available space */
+}
+
+.registration-content-container h1.page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 2.8vw, 2.8rem);
+    font-weight: bold;
+    color: var(--color-text-hero-title);
+    text-align: center; /* Center the main title */
+    margin-bottom: 30px;
+}
+
+.registration-content-container .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bold;
+    color: var(--color-text-hero-title);
+    margin-bottom: 20px;
+    margin-top: 40px; /* Add space above new sections */
+}
+
+.registration-content-container .note-title {
+    color: var(--color-registration-table-header-bg); /* Use the deep red color */
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 50px; /* More space after the note */
+    margin-top: 10px; /* Less space between title and note */
+}
+
+.registration-content-container p {
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    line-height: 1.6;
+    color: var(--color-registration-info-text);
+    margin-bottom: 20px;
+}
+
+.registration-content-container ol.registration-steps {
+    list-style-position: outside;
+    padding-left: 25px; /* Indent the numbers */
+    margin-top: 20px;
+}
+
+.registration-content-container ol.registration-steps li {
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    color: var(--color-registration-info-text);
+    line-height: 1.7;
+    margin-bottom: 25px; /* Space between each step */
+}
+
+.registration-content-container ol.registration-steps li a {
+    color: var(--color-primary-orange);
+    text-decoration: underline;
+    font-weight: 500;
+    word-break: break-all; /* Ensure long links wrap */
+}
+
+.registration-content-container ol.registration-steps li a:hover {
+    color: var(--color-accent-orange);
+}
+
+.registration-content-container ul.step-details {
+    list-style-type: none; /* No bullets */
+    padding-left: 20px;
+    margin-top: 15px;
+    border-left: 3px solid var(--color-accent-orange);
+    margin-left: 10px;
+}
+
+.registration-content-container ul.step-details li {
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    margin-bottom: 10px; /* Space between sub-steps */
+}
+
+.registration-content-container strong {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+
+/* Registration Tables (Old styles, no longer applied but safe to keep) */
+.registration-table-wrapper {
+    margin: 40px 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--color-registration-table-border);
+    font-size: 1rem;
+    text-align: left;
+    white-space: nowrap;
+    min-width: 600px;
+}
+
+.registration-table th,
+.registration-table td {
+    padding: 15px 20px;
+    border: 1px solid var(--color-registration-table-border);
+    color: var(--color-registration-text-white);
+}
+
+.registration-table th {
+    background-color: var(--color-registration-table-header-bg);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.15vw, 1.15rem);
+    text-align: center;
+}
+
+.registration-table td {
+    background-color: var(--color-registration-table-cell-bg);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+
+
+.registration-table tbody tr td:last-child {
+    text-align: right;
+}
+
+.registration-table tbody tr td:first-child {
+    font-weight: 500;
+}
+/* --- End of section to replace --- */
