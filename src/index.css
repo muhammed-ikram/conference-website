@@ -341,12 +341,13 @@ button {
 
 .hero-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem); /* Adaptive font size with min/max limits */
+  font-size: clamp(2.5rem, 4vw, 4.5rem); /* Adaptive font size with min/max limits */
   font-weight: bold;
   line-height: 1.1;
   color: var(--color-text-hero-title);
   margin-bottom: 20px;
   max-width: 800px;
+  
 }
 
 .hero-slogan {
@@ -667,7 +668,9 @@ button {
     line-height: 1.8;
     text-align: left;
 }
-
+.dialog{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .cfp-theme-column h4 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: bold;
@@ -689,14 +692,14 @@ button {
     font-size: clamp(0.95rem, 1vw, 1rem); /* Adaptive font size */
 }
 
-.cfp-theme-column ul li::before {
+/* .cfp-theme-column ul li::before {
     content: counter(list-item) ". ";
     counter-increment: list-item;
     position: absolute;
     left: 0;
     font-weight: bold;
     color: var(--color-text-dark);
-}
+} */
 
 
 .cfp-buttons-container {
