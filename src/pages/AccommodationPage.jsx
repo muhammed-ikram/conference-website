@@ -53,8 +53,10 @@ function AccommodationPage() {
   return (
     <div className="accommodation-page">
       <div className="accommodation-content-container">
-        <h1 className="section-heading">Accommodation in campus</h1>
-        <p>Registered participants can avail the facility of hostel accommodation within the <strong>campus (from 1st July 2025 - 7th July 2025) at a nominal charge of Rs. 300 per day</strong>. The hostel accommodation includes a cot, a bed sheet, a mattress and a pillow.</p>
+        <h1 className="section-heading">Accomodation Details</h1>
+
+        <h3>UPDATES WILL BE EXCOMMUNICATED SOON....</h3>
+        {/* <p>Registered participants can avail the facility of hostel accommodation within the <strong>campus (from 1st July 2025 - 7th July 2025) at a nominal charge of Rs. 300 per day</strong>. The hostel accommodation includes a cot, a bed sheet, a mattress and a pillow.</p>
         <p>Regarding dining options, <strong>lunch will be provided to all registered participants</strong> on the conference days. Breakfast and dinner can be availed by paying directly at the campus mess.</p>
         <p><strong>We look forward to welcoming you to ICCMS 2025!</strong></p>
         <p>Please note that <strong>online presentation slots are limited</strong> and will be allotted only to participants with <strong>valid reasons</strong>, primarily based on their <strong>distance from IIT Tirupati</strong>.</p>
@@ -62,13 +64,13 @@ function AccommodationPage() {
 
         {/* This "Registration" section title and text seems duplicated or slightly misplaced from the registration page
             in the original image. I'll include it exactly as it appears. */}
-        <h1 className="section-heading">Registration</h1>
+        {/* <h1 className="section-heading">Registration</h1>
         <p>All <strong>Offline participants</strong>, regardless of their preferred accommodation choice, are <strong>required to fill out this form.</strong></p>
 
         <h2 className="section-heading">Accommodation within Tirupati</h2>
-        <p>Accommodation registration closed</p>
+        <p>Accommodation registration closed</p> */}
 
-        <div className="hotel-card-grid">
+        {/* <div className="hotel-card-grid">
           {hotelData.map((hotel, index) => (
             <div key={index} className="hotel-card">
               <img src={hotel.imgSrc} alt={hotel.name} className="hotel-card-img" />
@@ -81,7 +83,7 @@ function AccommodationPage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       <DetailedFooter/>
     </div>

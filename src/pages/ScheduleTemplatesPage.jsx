@@ -63,8 +63,16 @@ function ScheduleTemplatesPage() {
           <h2>Templates</h2>
           <div className="templates-list">
             {/* 2. Change the button to an anchor (<a>) tag pointing to the imported PDF */}
-            <a 
+            {/* <a 
               href={posterTemplatePdf} 
+              className="template-btn" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Poster Template
+            </a> */}
+            <a 
+              href="https://drive.google.com/file/d/1BnznTgxw0mvm_rNfTk7wd4i9TtBocTHV/view?usp=sharing"
               className="template-btn" 
               target="_blank" 
               rel="noopener noreferrer"
