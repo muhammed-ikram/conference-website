@@ -86,8 +86,9 @@ function PublicationsPage() {
     <div className="publications-page">
       <div className="publications-content-container">
         <h1 className="page-title">Publications</h1>
+        <h3 className="page-title">UPDATES WILL BE EXCOMMUNICATED SOON....</h3>
 
-        <p className="publications-intro-text">Selected best papers from the conference will be recommended for peer review and possible publication in the following journals.</p>
+        {/* <p className="publications-intro-text">Selected best papers from the conference will be recommended for peer review and possible publication in the following journals.</p>
         <p className="publications-intro-text">Acceptance of an abstract and its presentation at the conference does not guarantee journal publication. Only high-quality papers will be recommended for peer review in the associated journals.</p>
 
         <div className="journal-grid">
@@ -100,7 +101,7 @@ function PublicationsPage() {
           ))}
         </div>
 
-        <p className="publications-footer-text">More journals will be updated soon</p>
+        <p className="publications-footer-text">More journals will be updated soon</p> */}
       </div>
       <DetailedFooter />
     </div>
