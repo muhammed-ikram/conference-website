@@ -11,7 +11,9 @@ function DetailedFooter() {
       <div className="footer-srit">
           <div className="logo-footer-srit">
               <div className="footer-logo">
-                  <img src={logo} alt="SRIT Logo" />
+                  <a href='https://www.srit.ac.in/'>
+                    <img src={logo} alt="SRIT Logo" />
+                  </a>
               </div>
               <div className="footer-logo-text-section">
                 <strong>Srinivasa Ramanujan </strong> 
