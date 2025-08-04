@@ -785,21 +785,32 @@ button {
   letter-spacing: -0.5px;
 }
 
-.speakers-grid-container {
+/* .speakers-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax for better fit */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px 80px;
   flex-grow: 1;
+} */
+
+.speakers-grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* One full-width column */
+  gap: 30px;
+  max-width: 100%; /* Full width of the page */
+  margin: 0 auto;
+  padding: 0 20px 80px; /* Optional: reduce side padding if needed */
+  flex-grow: 1;
 }
 
-.speaker-card {
+
+/* .speaker-card {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  padding: 30px 20px; /* Reduced padding slightly */
+  padding: 30px 20px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -807,7 +818,48 @@ button {
   min-height: 280px;
   justify-content: center;
   position: relative;
+} */
+
+
+.speaker-card {
+  background-color: rgb(243, 240, 240);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  /* Removed min-height */
 }
+
+/* Hover effect (optional) */
+.speaker-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Typography tweaks */
+.speaker-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.speaker-card p {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
 
 .speaker-card-img {
   width: 130px; /* Slightly smaller on larger viewports, better scaling down */

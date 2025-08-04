@@ -23,7 +23,7 @@ function SpeakersPage() {
         {speakersData.map((speaker, index) => (
           <div key={index} className="speaker-card">
             {/* <h3 className="speaker-card-session">{speaker.session}</h3> */}
-            <img src={speaker.img} alt={speaker.name} className="speaker-card-img" />
+            {/* <img src={speaker.img} alt={speaker.name} className="speaker-card-img" /> */}
             <h4 className="speaker-card-name">{speaker.name}</h4>
             <p className="speaker-card-affiliation">{speaker.affiliation}</p>
             {/* <p className="speaker-card-topic">{speaker.topic}</p> */}
