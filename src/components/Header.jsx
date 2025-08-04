@@ -59,7 +59,7 @@ function Header({ activePage, onNavigate }) {
           <li><a href="#speakers" className={activePage === 'speakers' ? 'active has-dropdown' : 'has-dropdown'} onClick={() => handleNavLinkClick('speakers')}>Speakers</a></li>
           <li><a href="#schedule" className={activePage === 'schedule' ? 'active' : ''} onClick={() => handleNavLinkClick('schedule')}>Schedule</a></li>
           <li><a href="#registration" className={activePage === 'registration' ? 'active' : ''} onClick={() => handleNavLinkClick('registration')}>Registration</a></li>
-          <li><a href="#accommodation" className={activePage === 'accommodation' ? 'active' : ''} onClick={() => handleNavLinkClick('accommodation')}>Accommodation</a></li>
+          <li><a href="#accommodation" className={activePage === 'accommodation' ? 'active' : ''} onClick={() => handleNavLinkClick('accommodation')}>Committee</a></li>
           <li><a href="#publication" className={activePage === 'publication' ? 'active' : ''} onClick={() => handleNavLinkClick('publication')}>Publication</a></li>
         </ul>
       </nav>

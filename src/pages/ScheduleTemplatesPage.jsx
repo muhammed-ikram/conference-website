@@ -24,7 +24,7 @@ function ScheduleTemplatesPage() {
 
           <div className="schedule-grid">
 
-            <h1>Important Dates</h1>
+            <h3>Will be Updated soon..... <br />Stay Tuned</h3>
 
             
             {/* Pre- & Post-Conference */}
@@ -74,7 +74,7 @@ function ScheduleTemplatesPage() {
               Poster Template
             </a>
             
-            <button className="template-btn">Extended Abstract Template Word File</button>
+            {/* <button className="template-btn">Extended Abstract Template Word File</button> */}
           </div>
         </section>
 

@@ -13,12 +13,13 @@ function RegistrationPage() {
           NOTE: Limited to the first 50 registered participants only
         </h2>
 
+        <h2 className="section-title">Important Dates:</h2>
         <ul>
-              <li>Call for Papers Announcement: July 30, 2025</li>
-              <li>Full Paper Submission Deadline: August 25, 2025</li>
-              <li>Acceptance Notification: August 30, 2025</li>
-              <li>Final Camera-Ready Paper Submission: September 7, 2025</li>
-              <li>Last Date for Registration: September 10, 2025</li>
+              <li>Call for Papers Announcement: 30-07-2025</li>
+              <li>Full Paper Submission Deadline: 25-08-2025</li>
+              <li>Acceptance Notification: 30-08-2025</li>
+              <li>Final Camera-Ready Paper Submission: 07-09-2025</li>
+              <li>Last Date for Registration: 10-09-2025</li>
             </ul>
 
         <h2 className="section-title">How to Register:</h2>
