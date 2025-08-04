@@ -309,6 +309,13 @@ button {
     box-shadow: -2px 0 5px rgba(0,0,0,0.2);
 }
 
+.aicte_head {
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
+  align-items: flex-start;
+}
+
 .vertical-downloads-btn:hover {
     background-color: var(--color-accent-orange);
 }
