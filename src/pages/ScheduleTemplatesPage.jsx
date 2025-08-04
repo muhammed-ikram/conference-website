@@ -57,13 +57,8 @@ function ScheduleTemplatesPage() {
           <h2>Templates</h2>
           <div className="templates-list">
             {/* 2. Change the button to an anchor (<a>) tag pointing to the imported PDF */}
-<<<<<<< HEAD
             {/* <a 
               href={posterTemplatePdf} 
-=======
-            <a 
-              href= "https://drive.google.com/file/d/1-hfZDwEOIDKBHMfqueG02qG18zjj0b0q/view?usp=drive_link"
->>>>>>> origin/ikram
               className="template-btn" 
               target="_blank" 
               rel="noopener noreferrer"
