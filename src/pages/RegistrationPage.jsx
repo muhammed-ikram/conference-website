@@ -13,6 +13,14 @@ function RegistrationPage() {
           NOTE: Limited to the first 50 registered participants only
         </h2>
 
+        <ul>
+              <li>Call for Papers Announcement: July 30, 2025</li>
+              <li>Full Paper Submission Deadline: August 25, 2025</li>
+              <li>Acceptance Notification: August 30, 2025</li>
+              <li>Final Camera-Ready Paper Submission: September 7, 2025</li>
+              <li>Last Date for Registration: September 10, 2025</li>
+            </ul>
+
         <h2 className="section-title">How to Register:</h2>
         
         <p>Please follow the steps below to complete your registration through the AICTE ATAL Portal:</p>

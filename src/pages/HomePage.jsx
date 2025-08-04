@@ -18,22 +18,29 @@ function HomePage({ activePage, onNavigate }) {
     <>
       {/* Hero Section */}
       <main className="hero-section">
-        <button className="hero-youtube-btn"><a href="https://www.google.com/">Registration</a></button>
+        <button className="hero-youtube-btn"><a href="https://easychair.org/my/login_author?conference=294488&sum=a18fcbbb4280b4cf7be7c3ec4aab6138">Register with EasyChair</a></button>
+        <button className="hero-youtube-btn"><a href=" https://forms.gle/fn3JipZCwLrWn5Wp9">Register with GoogleForm</a></button>
+
         {/* <a href="#registration" className={activePage === 'registration' ? 'active' : ''} onClick={() => handleNavLinkClick('registration')}>Registration</a> */}
+          <h4>AICTE – Vibrant Advocacy for Advancement <br />and Nurturing of Indian Languages (VAANI)</h4>
+          <br />
+<h4>on</h4><br />
         <div className="title-telugu">
 
         
         <h1 className="hero-title">
+
+
           Next generation construction  <br />
           with sustainable, resilient and <br />
           smart civil engineering
         </h1>
 
-        {/* <h1 className="hero-title">
+        <h1 className="hero-title">
           స్థిరమైన, స్థితిస్థాపకత కలిగిన <br />
           మరియు స్మార్ట్ సివిల్ ఇంజనీరింగ్‌తో <br />
           తదుపరి తరం నిర్మాణం
-        </h1> */}
+        </h1>
         </div>
         <p className="hero-slogan">
           "<b className='srit'>S</b>ustainable, <b className='srit'>R</b>esilient <b className='srit'>I</b>nnovation for <b className='srit'>T</b>omorrow"

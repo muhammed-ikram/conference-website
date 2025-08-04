@@ -392,6 +392,17 @@ button {
   text-align: center;
 }
 
+.themes-conf {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+.themes-conf li {
+padding-left: 1.5rem;
+}
 .countdown-section h2 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
@@ -1214,7 +1225,7 @@ button {
 
 
 .journal-image {
-    width: 100px;
+    width: 35rem;
     height: 140px;
     object-fit: contain;
     margin-bottom: 15px;
