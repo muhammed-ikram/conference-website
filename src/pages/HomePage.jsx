@@ -14,6 +14,7 @@ function HomePage({ activePage, onNavigate }) {
     <>
       {/* Hero Section */}
       <main className="hero-section">
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5rem', alignItems: 'center' }}>
         <button className="hero-youtube-btn">
           <a href="https://easychair.org/my/login_author?conference=294488&sum=a18fcbbb4280b4cf7be7c3ec4aab6138">
             Register with EasyChair
@@ -24,6 +25,7 @@ function HomePage({ activePage, onNavigate }) {
             Register with GoogleForm
           </a>
         </button>
+        </div>
        
         <h4>
           AICTE - Vibrant Advocacy for Advancement <br />

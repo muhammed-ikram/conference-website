@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/SRIT-Logo.jpg';
+import logo from '../assets/SRIT_HEADER.jpeg';
 
 function Header({ activePage, onNavigate }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
