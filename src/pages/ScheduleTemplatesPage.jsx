@@ -26,13 +26,7 @@ function ScheduleTemplatesPage() {
 
             <h1>Important Dates</h1>
 
-            <ul>
-              <li>Call for Papers Announcement: July 30, 2025</li>
-              <li>Full Paper Submission Deadline: August 25, 2025</li>
-              <li>Acceptance Notification: August 30, 2025</li>
-              <li>Final Camera-Ready Paper Submission: September 7, 2025</li>
-              <li>Last Date for Registration: September 10, 2025</li>
-            </ul>
+            
             {/* Pre- & Post-Conference */}
             {/* <button className="schedule-btn full-width">Pre-Conference workshop (2nd July 2025)</button>
             <button className="schedule-btn full-width">Post-Conference workshop (6th July 2025)</button> */}
