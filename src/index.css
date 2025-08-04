@@ -437,6 +437,44 @@ button {
     align-items: center;
 }
 
+/* .footer-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;  */
+    /* gap: 40rem; Space between sections
+}
+
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width:max-content;
+} */
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap:30rem
+}
+
+.footer-contact {
+  max-width: 45%;
+}
+
+.footer-contact h3 {
+  margin-bottom: 10px;
+  
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
 /* The direct container for the logo and text block */
 .logo-footer-srit{
   display: flex;
