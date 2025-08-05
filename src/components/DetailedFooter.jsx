@@ -11,7 +11,7 @@ function DetailedFooter() {
           <h3>Contact Us</h3>
           <p><strong>Name:</strong> Dr. U Raghu Babu</p>
           <p><strong>Phone:</strong> +91 91779 64984</p>
-          <p><strong>Email: </strong>raghu@srit.ac.in</p>
+          <p><strong>Email: </strong>ncsrsc2025@srit.ac.in</p>
         </div>
 
         {/* Institute Info - Right Side */}
