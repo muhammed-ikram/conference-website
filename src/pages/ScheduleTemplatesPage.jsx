@@ -71,7 +71,7 @@ function ScheduleTemplatesPage() {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              Poster Template
+              Paper Template
             </a>
             
             {/* <button className="template-btn">Extended Abstract Template Word File</button> */}

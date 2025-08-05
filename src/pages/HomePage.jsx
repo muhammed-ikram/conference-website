@@ -24,7 +24,13 @@ function HomePage({ activePage, onNavigate }) {
               Register with GoogleForm
             </a>
           </button>
-        </div>
+
+          <button className="hero-youtube-btn">
+            <a href=" https://docs.google.com/document/d/18r0j8vOdCTRvqjJ42K0Rot0bjxt1aNob/edit?usp=drive_link&ouid=107457678957296556688&rtpof=true&sd=true">
+              Download the Brochure
+            </a>
+          </button>
+        </div>  
 
 
         <div className="aicte_head">
