@@ -35,13 +35,8 @@ function HomePage({ activePage, onNavigate }) {
           </div>
           
 
-<<<<<<< HEAD
-          <div className="aicte-head-telugu">
-            <h4>ఎఐసీటీఈ - VAANI (భారతీయ భాషల అభివృద్ధి మరియు <br />
-=======
           <div>
             <h4 style={{fontWeight:'550'}}>ఎఐసీటీఈ - VAANI (భారతీయ భాషల అభివృద్ధి మరియు <br />
->>>>>>> 6c524f0cb445c227e27b79588697ba040f594a6c
               పోషణ కోసం ఉత్సాహభరితమైన వాదన)</h4><br />
           </div> 
 
