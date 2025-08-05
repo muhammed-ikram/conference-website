@@ -181,6 +181,15 @@ a:focus:not(:focus-visible) {
   background-color: #de6235;
 }
 
+.aicte-head-telugu {
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  font-weight: 600;
+  margin-top: 10px; /* Add some space between English and Telugu titles */
+  padding-left: 10rem;
+ 
+}
+
 .header-logo-section {
   display: flex;
   align-items: center;
@@ -1576,7 +1585,7 @@ padding-left: 1.5rem;
     height: 4rem;
   }
 
-  /* Hide desktop navigation and show hamburger */
+* Hide desktop navigation and show hamburger */
   .header-nav-links {
     display: none;
   }
@@ -1972,7 +1981,7 @@ padding-left: 1.5rem;
     text-align: center;
   }
    .hero-title-telugu {
-    font-weight: 500;
+    font-weight: 5000;
     font-size: 0.1rem;
     text-align: center;
     margin-top: 10px; /* Add some space between English and Telugu titles */
