@@ -13,16 +13,18 @@ function HomePage({ activePage, onNavigate }) {
     <>
       {/* Hero Section */}
       <main className="hero-section">
-        <button className="hero-youtube-btn">
-          <a href="https://easychair.org/my/login_author?conference=294488&sum=a18fcbbb4280b4cf7be7c3ec4aab6138">
-            Register with EasyChair
-          </a>
-        </button>
-        <button className="hero-youtube-btn">
-          <a href=" https://forms.gle/fn3JipZCwLrWn5Wp9">
-            Register with GoogleForm
-          </a>
-        </button>
+        <div className="hero-buttons-container">
+          <button className="hero-youtube-btn">
+            <a href="https://easychair.org/my/login_author?conference=294488&sum=a18fcbbb4280b4cf7be7c3ec4aab6138">
+              Register with EasyChair
+            </a>
+          </button>
+          <button className="hero-youtube-btn">
+            <a href=" https://forms.gle/fn3JipZCwLrWn5Wp9">
+              Register with GoogleForm
+            </a>
+          </button>
+        </div>
 
 
         <div className="aicte_head">

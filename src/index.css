@@ -57,6 +57,12 @@
     box-sizing: border-box; /* Crucial for consistent sizing */
 }
 
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 html, body, #root, .app { /* Ensure height applies correctly to fill viewport */
   height: 100%;
 }
@@ -73,6 +79,8 @@ body {
   line-height: 1.6;
   position: relative; /* For the mobile menu overlay to sit relative to body */
   min-height: 100vh; /* Fallback for .app flexbox to push footer */
+  -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjustment */
+  -ms-text-size-adjust: 100%; /* Prevent Windows Phone text size adjustment */
 }
 
 /* Class to prevent body scroll when mobile menu is open */
@@ -80,6 +88,7 @@ body.no-scroll {
   overflow: hidden;
   position: fixed; /* Fixes position on iOS/Safari, crucial for proper no-scroll behavior */
   width: 100%;
+  height: 100%; /* Ensure full height is maintained */
 }
 
 
@@ -97,6 +106,19 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, address {
 a {
   text-decoration: none;
   color: inherit;
+  /* Improve touch targets for links */
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Form elements responsive styles */
+input, textarea, select {
+  max-width: 100%;
+  font-size: 16px; /* Prevent zoom on iOS */
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 button {
@@ -107,6 +129,24 @@ button {
   border-radius: 5px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  min-height: 44px; /* Ensure touch-friendly size */
+  min-width: 44px;
+}
+
+/* Better focus states for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-primary-orange);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline on mouse interaction, keep for keyboard */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Layout Container for Centering Content - Not directly used on page-level components, but good utility */
@@ -166,6 +206,7 @@ button {
   object-fit: cover; */
   background-color: none;
   margin-right: 10px; /* Space between logo and text */
+  max-width: 100%; /* Ensure logo doesn't overflow on small screens */
 }
 
 .title-telugu {
@@ -312,8 +353,12 @@ button {
 .aicte_head {
   display: flex;
   flex-direction: row;
-  gap: 15rem;
+  gap: 2rem;
   align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .vertical-downloads-btn:hover {
@@ -337,14 +382,26 @@ button {
 .hero-youtube-btn {
   background-color: var(--color-primary-orange);
   color: white;
-  padding: 8px 15px;
+  padding: 12px 20px;
   border-radius: 20px;
   font-size: 14px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  min-height: 44px;
+  min-width: 120px;
 }
 
 .hero-youtube-btn:hover {
   background-color: var(--color-accent-orange);
+}
+
+.hero-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 
 .hero-title {
@@ -384,14 +441,14 @@ button {
 .sponsors{
   background-color:#f5f0db;
   text-align: center;
-  height: 15rem;
-  padding-top: 2rem;
+  min-height: 15rem;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
-  justify-content: space-between;
-  padding-left: 18rem;
-  padding-right: 18rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .sponsors .image-sponsors{
@@ -489,7 +546,9 @@ padding-left: 1.5rem;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap:30rem
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-contact {
@@ -1125,6 +1184,9 @@ padding-left: 1.5rem;
     margin: 40px 0;
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .registration-table {
@@ -1333,7 +1395,8 @@ padding-left: 1.5rem;
 
 
 .journal-image {
-    width: 35rem;
+    width: 100%;
+    max-width: 120px;
     height: 140px;
     object-fit: contain;
     margin-bottom: 15px;
@@ -1390,7 +1453,7 @@ padding-left: 1.5rem;
   position: fixed;
   top: 0;
   left: -280px; /* Start off-screen */
-  width: 280px; /* Width of the sliding menu */
+  width: min(280px, 80vw); /* Responsive width, max 80% of viewport */
   height: 100%;
   background-color: var(--color-simple-footer-bg); /* Use a dark background for the menu */
   color: white;
@@ -1424,9 +1487,11 @@ padding-left: 1.5rem;
 .mobile-nav-menu ul li a {
   font-size: 1.2rem;
   color: white;
-  padding: 10px 0;
-  display: block;
+  padding: 15px 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  min-height: 44px; /* Touch-friendly height */
+  display: flex;
+  align-items: center;
 }
 
 .mobile-nav-menu ul li:last-child a {
@@ -1445,7 +1510,7 @@ padding-left: 1.5rem;
 }
 
 .mobile-nav-menu.open {
-  transform: translateX(280px); /* Slide into view */
+  transform: translateX(min(280px, 80vw)); /* Slide into view with responsive width */
 }
 
 /* Hide header-download-btn on smaller screens if a vertical is always there */
@@ -1458,7 +1523,7 @@ padding-left: 1.5rem;
 
 @media (max-width: 992px) { /* Adjustments for Tablets and smaller desktops */
   .header {
-    padding: 15px 30px;
+    padding: 15px 20px;
     flex-wrap: wrap;
     justify-content: space-between; /* Adjusted for better alignment */
     position: sticky; /* Make header sticky on scroll */
@@ -1466,6 +1531,12 @@ padding-left: 1.5rem;
     background-color: var(--color-background-light); /* Solid background for sticky header */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
     margin: 0; /* Remove potential leftover margins */
+  }
+
+  /* Make logo smaller on tablets */
+  .header-logo-section .header-logo-image {
+    width: 25rem;
+    height: 4rem;
   }
 
   /* Hide desktop navigation and show hamburger */
@@ -1493,7 +1564,40 @@ padding-left: 1.5rem;
     min-height: auto; /* Let content dictate height if header is sticky */
   }
 
+  /* Sponsors section responsiveness */
+  .sponsors {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .sponsors .image-sponsors {
+    height: 8rem;
+  }
+
+  /* AICTE head section responsiveness */
+  .aicte_head {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
   /* Footer responsiveness */
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-contact {
+    max-width: 100%;
+  }
+
+  .logo-footer-srit {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
   .detailed-footer-section .footer-top {
     flex-direction: column;
     align-items: flex-start; /* Align content to left, like text would be naturally */
@@ -1717,6 +1821,47 @@ padding-left: 1.5rem;
   }
 }
 
+@media (max-width: 768px) { /* Medium mobile devices */
+  .header {
+    padding: 12px 20px;
+  }
+
+  .header-logo-section .header-logo-image {
+    width: 20rem;
+    height: 3.5rem;
+  }
+
+  .hero-section {
+    padding: 40px 25px;
+  }
+
+  .aicte_head {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .title-telugu {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .sponsors {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .sponsors .image-sponsors {
+    height: 7rem;
+  }
+
+  .vertical-downloads-btn {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 480px) { /* Adjustments for very small phones */
   .header {
     padding: 10px 15px;
@@ -1728,38 +1873,91 @@ padding-left: 1.5rem;
     font-size: 28px; /* Slightly smaller icon */
   }
   .vertical-downloads-btn { /* Make it less imposing on super small screens */
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 15px;
+    font-size: 14px;
+    right: -5px; /* Move slightly off-screen to save space */
+  }
+
+  /* Make logo much smaller on mobile phones */
+  .header-logo-section .header-logo-image {
+    width: 18rem;
+    height: 3rem;
+  }
+
+  /* Sponsors section for mobile */
+  .sponsors {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    min-height: auto;
+  }
+
+  .sponsors .image-sponsors {
+    height: 6rem;
+    max-width: 80%;
+  }
+
+  /* AICTE head section for mobile */
+  .aicte_head {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .aicte_head h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Hero buttons for mobile */
+  .hero-buttons-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .hero-youtube-btn {
+    width: 100%;
+    max-width: 280px;
+    margin-right: 0;
   }
 
   .hero-section {
     padding: 30px 20px;
+    text-align: center;
+    align-items: center;
   }
   .hero-title {
-    font-size: 7.5vw; /* Slightly larger on smallest screen, so it doesn't get tiny */
+    font-size: clamp(1.8rem, 7.5vw, 3rem); /* Better responsive scaling with limits */
+    text-align: center;
   }
   .hero-slogan {
-    font-size: 3.5vw;
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    text-align: center;
   }
   .hero-date, .hero-location {
     font-size: 0.9rem;
   }
 
   .countdown-section {
-    padding: 50px 15px;
+    padding: 40px 15px;
   }
   .countdown-section h2 {
     font-size: 1.6rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   .countdown-number {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .countdown-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   .countdown-grid {
-    gap: 20px;
+    gap: 15px;
+    justify-content: center;
+  }
+  .countdown-item {
+    min-width: 70px;
   }
 
   .detailed-footer-section {
@@ -1902,3 +2100,66 @@ padding-left: 1.5rem;
     font-size: 0.75rem;
   }
 }
+
+/* Extra small mobile devices (320px and below) */
+@media (max-width: 320px) {
+  .header {
+    padding: 8px 10px;
+  }
+
+  .header-logo-section .header-logo-image {
+    width: 15rem;
+    height: 2.5rem;
+  }
+
+  .hamburger-icon {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .hero-section {
+    padding: 20px 15px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-slogan {
+    font-size: 1.2rem;
+  }
+
+  .aicte_head h4 {
+    font-size: 0.9rem;
+  }
+
+  .sponsors {
+    padding: 1rem 0.5rem;
+  }
+
+  .sponsors .image-sponsors {
+    height: 5rem;
+  }
+
+  /* Ensure buttons are touch-friendly */
+  .hero-youtube-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px; /* iOS recommended touch target size */
+  }
+
+  .mobile-nav-menu ul li a {
+    padding: 15px 0;
+    font-size: 1.1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hide vertical downloads button on very small screens */
+  .vertical-downloads-btn {
+    display: none;
+  }
+}
+
