@@ -13,23 +13,25 @@ function HomePage({ activePage, onNavigate }) {
     <>
       {/* Hero Section */}
       <main className="hero-section">
-        <button className="hero-youtube-btn">
-          <a href="https://easychair.org/my/login_author?conference=294488&sum=a18fcbbb4280b4cf7be7c3ec4aab6138">
-            Register with EasyChair
-          </a>
-        </button>
-        <button className="hero-youtube-btn">
-          <a href=" https://forms.gle/fn3JipZCwLrWn5Wp9">
-            Register with GoogleForm
-          </a>
-        </button>
+        <div className="hero-buttons-container">
+          <button className="hero-youtube-btn">
+            <a href="https://easychair.org/my/login_author?conference=294488&sum=a18fcbbb4280b4cf7be7c3ec4aab6138">
+              Register with EasyChair
+            </a>
+          </button>
+          <button className="hero-youtube-btn">
+            <a href=" https://forms.gle/fn3JipZCwLrWn5Wp9">
+              Register with GoogleForm
+            </a>
+          </button>
+        </div>
 
 
         <div className="aicte_head">
           <div>
             <h4>AICTE - Vibrant Advocacy for Advancement <br />
-          and Nurturing of Indian Languages (VAANI)</h4><br />
-          <h4 style={{ paddingLeft: '12rem', fontSize: '2rem' }}>on</h4><br />
+          and Nurturing of Indian Languages (VAANI) on</h4><br />
+          {/* <h4 style={{ paddingLeft: '6rem', fontSize: '2rem' }}>on</h4><br /> */}
           </div>
           
 
@@ -61,7 +63,7 @@ function HomePage({ activePage, onNavigate }) {
          
           <div>  
                  
-            <h1 className="hero-title" style={{ fontSize: '3.8rem' }}>
+            <h1 className="hero-title-telugu" style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
               స్థిరమైన, స్థితిస్థాపకత కలిగిన <br />
               మరియు స్మార్ట్ సివిల్ ఇంజనీరింగ్‌తో <br />
               తదుపరి తరం నిర్మాణం
