@@ -29,14 +29,14 @@ function HomePage({ activePage, onNavigate }) {
 
         <div className="aicte_head">
           <div>
-            <h4>AICTE - Vibrant Advocacy for Advancement <br />
-          and Nurturing of Indian Languages (VAANI) on</h4><br />
+            <h4 style={{fontWeight:'650'}}>AICTE - Vibrant Advocacy for Advancement <br />
+          and Nurturing of Indian Languages (VAANI) <strong>on</strong></h4><br />
           {/* <h4 style={{ paddingLeft: '6rem', fontSize: '2rem' }}>on</h4><br /> */}
           </div>
           
 
           <div>
-            <h4>ఎఐసీటీఈ - VAANI (భారతీయ భాషల అభివృద్ధి మరియు <br />
+            <h4 style={{fontWeight:'550'}}>ఎఐసీటీఈ - VAANI (భారతీయ భాషల అభివృద్ధి మరియు <br />
               పోషణ కోసం ఉత్సాహభరితమైన వాదన)</h4><br />
           </div> 
 
@@ -63,7 +63,12 @@ function HomePage({ activePage, onNavigate }) {
          
           <div>  
                  
-            <h1 className="hero-title-telugu" style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+            {/* <h1 className="hero-title-telugu" style={{ fontSize: '3rem', fontWeight: 'bold' }}>
+              స్థిరమైన, స్థితిస్థాపకత కలిగిన <br />
+              మరియు స్మార్ట్ సివిల్ ఇంజనీరింగ్‌తో <br />
+              తదుపరి తరం నిర్మాణం
+            </h1> */}
+             <h1 className="hero-title-telugu" >
               స్థిరమైన, స్థితిస్థాపకత కలిగిన <br />
               మరియు స్మార్ట్ సివిల్ ఇంజనీరింగ్‌తో <br />
               తదుపరి తరం నిర్మాణం
